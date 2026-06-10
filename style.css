@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: #A18E78;
+    font-family: 'inter', sans-serif;
+    color: #FFFDFB;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.hero-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: 0.05em;
+    color: #FFFDFB;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    width: 100%;
+    height: 1.5px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.menu-icon span:nth-child(2) {
+    width: 80%;
+    align-self: flex-end;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+}
+
+.hero-img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.hero-text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+}
+
+.hero-title {
+    font-family: 'bodoni moda', serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 1.0);
+}
+
+.hero-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 24px;
+    margin-top: 60px; 
+    padding-bottom: 40px;
+}
+
+.cta-button {
+    background: transparent;
+    border: 1px solid #FFFDFB;
+    color: #ffffff;
+    font-family: 'inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 14px 36px;
+    border-radius: 50px;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hero-keywords {
+    font-family: 'inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.20em;
+    color: rgba(255, 255, 255, 1.0);
+}
