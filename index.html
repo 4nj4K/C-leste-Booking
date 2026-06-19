@@ -11,7 +11,9 @@
 </head>
 <body>
 
+    <!--Hero section-->
     <section class="hero">
+        <!--Header-->
         <header class="hero-header">
             <h1 class="logo">Céleste</h1>
             <div class="menu-icon">
@@ -21,6 +23,7 @@
             </div>
         </header>
 
+        <!--Hero image & text-->
         <div class="hero-image-container">
             <img src="bilder/Céleste-hero.svg" alt="Céleste Hudvård" class="hero-image">
 
@@ -29,12 +32,107 @@
             </div>
         </div>
 
+        <!--Hero button-->
         <div class="hero-bottom">
-            <button class="cta-button">BOKA DIN STUND</button>
+            <button class="cta-button">BOKA DIN <br> STUND</button>
             <p class="hero-keywords">ANALYSERA  &bull;  BEHANDLA  &bull;  BEVARA</p>
         </div>
+    </section>
 
+
+    <!--Treatments section-->
+    <section class="treatments-section">
+        <h2 class="section-title">VÅRA BEHANDLINGAR</h2>
+        <p class="section-subtitle">UTFORSKA VÅRA KONCEPT</p>
+
+        <!--Karusell container-->
+        <div class="carousel-container">
+
+            <!--Kort: ansikte-->
+            <a href="ansikte.html" class="card-link">
+                <div class="card">
+                    <img src="bilder/ansikte-behandling-bild.svg" alt="Ansiktsbehandling" class="card-img">
+                    <div class="card-overlay">
+                        <h3 class="card-title">ANSIKTE</h3>
+                    </div>
+                </div>
+            </a>
+
+            <!--Kort: massagee-->
+            <a href="massage.html" class="card-link">
+                <div class="card">
+                    <img src="bilder/massage-behandling-bild.svg" alt="Massage" class="card-img">
+                    <div class="card-overlay">
+                        <h3 class="card-title">MASSAGE</h3>
+                    </div>
+                </div>
+            </a>
+
+            <!--Kort: Ögon o bryn-->
+            <a href="bryn.html" class="card-link">
+                <div class="card">
+                    <img src="bilder/Ögon-bryn-bild.svg" alt="Ögon och bryn" class="card-img">
+                    <div class="card-overlay">
+                        <h3 class="card-title">FRANSAR & BRYN</h3>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!--Therapist section-->
+    <section class="therapists-section">
+        <h2 class="therapists-title">MÖT VÅRA TERAPEUTER</h2>
+
+        <div class="therapists-carousel-container">
+            <button class="nav-arrow prev-arrow" id="prevBtn">
+                <img src="bilder/vänster-pil.svg" alt="Föregående">
+            </button>
+
+            <div class="therapists-slider-track">
+                <div class="therapists-slider" id="carouselSlider">
+
+                    <div class="therapist-card active" data-name="KRISTIN" data-role="AUKT. HUDTERAPEUT">
+                        <div class="image-wrapper">
+                            <img src="bilder/HT1.svg" alt="Kristin" class="therapist-img">
+                        </div>
+                    </div>
+
+                    <div class="therapist-card" data-name="SARA" data-role="HUDTERAPEUT & MASSÖR">
+                        <div class="image-wrapper">
+                            <img src="bilder/HT2.svg" alt="Sara" class="therapist-img">
+                        </div>
+                    </div>
+
+                    <div class="therapist-card" data-name="ELSA" data-role="FRANSSPECIALIST">
+                        <div class="image-wrapper">
+                            <img src="bilder/HT3.png" alt="Elsa" class="therapist-img">
+                        </div>
+                    </div>
+
+                    <div class="therapist-card" data-name="LINN" data-role="AUKT. HUDTERAPEUT">
+                        <div class="image-wrapper">
+                            <img src="bilder/HT4.png" alt="Linn" class="therapist-img">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="nav-arrow next-arrow" id="nextBtn">
+                <img src="bilder/höger-pil.svg" alt="Nästa">
+            </button>
+
+        </div>
+
+        <div class="therapist-info">
+            <h3 class="therapist-name" id="therapistName">KRISTIN</h3>
+            <p class="therapist-role" id="therapistRole">AUKT- HUDTERAPEUT</p>
+            <a href="om-oss.html" class="about-button">OM OSS</a>
+        </div>
     </section>
     
+    <script src="script.js"></script>
 </body>
 </html>
