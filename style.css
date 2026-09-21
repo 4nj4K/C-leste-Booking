@@ -581,3 +581,151 @@ html, body {
 .sticky-btn:active {
     transform: scale(0.96);
 }
+
+.site-footer {
+    background: #0f0f0f;
+    color: rgba(255, 253, 251, 0.7);
+    padding: 60px 20px 100px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.footer-logo {
+    font-family: 'bodoni moda', serif;
+    font-size: 20px;
+    letter-spacing: 0.25em;
+    color: #fffdfb;
+    margin-bottom: 12px;
+}
+
+.footer-tagline {
+    line-height: 1.6;
+    font-weight: 200;
+}
+
+.footer-heading {
+    font-family: 'bodoni moda', serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: #fffdfb;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.footer-col p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-weight: 200;
+}
+
+.footer-col a {
+    color: rgba(255, 253, 251, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: #fffdfb;
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 11px;
+}
+
+/* Responsive Design */
+
+@media (min-width: 1024px) {
+    section {
+        padding: 120px 40px;
+    }
+
+    /* Hero Section */
+
+    .hero {
+        padding: 180px 40px 140px;
+    }
+
+    .hero h1 {
+        font-size: 64px;
+        letter-spacing: 0.35em;
+    }
+
+    .hero p {
+        font-size: 16px;
+        max-width: 580px;
+        margin: 0 auto 40px;
+    }
+
+    /* Nav / Header for desktop */
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px 40px;
+    }
+
+    .desktop-nav {
+        display: flex;
+        gap: 36px;
+        align-items: center;
+    }
+
+    .desktop-nav a {
+        font-family: 'inter', sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        color: rgba(255, 253, 251, 0.8);
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+    }
+
+    .desktop-nav a:hover {
+        color: #fffdfb;
+    }
+
+    .treatments-grid, .therapist-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .therapist-card {
+        margin-bottom: 0;
+    }
+
+    .carousel-wrapper {
+        max-width: 700px;
+        height: 460px;
+    }
+
+    .carousel-3d {
+        width: 320px;
+        height: 420px;
+    }
+
+
+}
