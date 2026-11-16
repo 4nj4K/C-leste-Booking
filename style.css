@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 html, body {
@@ -22,7 +21,7 @@ html, body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 30px 0 0 0;
+    padding: 10px 0 0 0;
     text-align: center;
 }
 
@@ -64,6 +63,10 @@ html, body {
     align-self: flex-end;
 }
 
+.desktop-nav {
+    display: none;
+}
+
 .hero-image-container {
     position: relative;
     width: 100%;
@@ -72,7 +75,7 @@ html, body {
     padding: 0;
 }
 
-.hero-img {
+.hero-image {
     width: 100%;
     display: block;
     height: auto;
@@ -133,8 +136,7 @@ html, body {
     color: rgba(255, 255, 255, 1.0);
 }
 
-
-/*behandlingssektion*/
+/* Behandlingssektion */
 .treatments-section {
     background-color: #EAE4DC;
     padding: 40px 0;
@@ -192,7 +194,6 @@ html, body {
     position: relative;
     border-radius: 16px;
     overflow: hidden;
-    
 }
 
 .card-img {
@@ -212,7 +213,7 @@ html, body {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 24px
+    padding: 24px;
 }
 
 .card-title {
@@ -220,13 +221,12 @@ html, body {
     font-weight: 300;
     font-size: 15px;
     letter-spacing: 0.15em;
-    color:#ffffff;
+    color: #ffffff;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     margin-bottom: 20px;
 }
 
 /* Terapeutsektion */
-
 .therapists-section {
     background-image: url(bilder/terapeut-bg.svg);
     background-position: center;
@@ -283,8 +283,6 @@ html, body {
     align-items: center;
 }
 
-
-
 .image-wrapper {
     width: 100%;
     height: 100%;
@@ -295,8 +293,6 @@ html, body {
     transition: transform 0.1s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.1s ease;
     will-change: transform;
 }
-
-
 
 .therapist-img {
     width: 100%;
@@ -381,7 +377,6 @@ html, body {
 }
 
 /* Review section */
-
 .reviews-section {
     width: 100%;
     position: relative;
@@ -455,22 +450,19 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 0.8px solid rgba(255, 255, 255, 0.25);
     border-radius: 4px;
-    padding: 30px 20px;
+    padding: 24px 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-
     transition: transform 0.4s ease, opacity 0.4s ease, filter 0.4s ease;
     cursor: pointer;
-    padding: 24px 18px;
 }
 
 .glass-stars {
@@ -505,7 +497,6 @@ html, body {
 }
 
 /* Sticky booking bar */
-
 .sticky-booking-bar {
     position: fixed;
     bottom: 0;
@@ -513,13 +504,10 @@ html, body {
     width: 100%;
     z-index: 999;
     padding: 12px 20px;
-
     background: rgba(20, 20, 20, 0.45);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-top: 1px solid rgba(255, 255, 255, 0.15);
-
-    /* Animation - Rättat till 0.4s ease */
     transform: translateY(100%);
     opacity: 0;
     transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
@@ -540,7 +528,6 @@ html, body {
     justify-content: space-between;
 }
 
-/* Tvingar titeln och undertexten att staplas vertikalt */
 .sticky-text {
     display: flex;
     flex-direction: column;
@@ -574,8 +561,7 @@ html, body {
     padding: 10px 18px;
     border-radius: 2px;
     text-decoration: none;
-    /* Rättat till transform */
-    transition: background 0.3s ease, transform 0.2s ease;
+    transform: background 0.3s ease, transform 0.2s ease;
 }
 
 .sticky-btn:active {
@@ -653,79 +639,274 @@ html, body {
     font-size: 11px;
 }
 
-/* Responsive Design */
-
+/* Responsive Design (Desktop) */
 @media (min-width: 1024px) {
-    section {
-        padding: 120px 40px;
+    /* SCROLL ANIMATION ENDAST PÅ DESKTOP */
+    .hero-bottom.fade-in-section {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0.1s,
+                    transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0.1s;
     }
 
-    /* Hero Section */
-
-    .hero {
-        padding: 180px 40px 140px;
+    /* När klassen is-visible läggs till flyter det upp */
+    .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
     }
 
-    .hero h1 {
-        font-size: 64px;
-        letter-spacing: 0.35em;
-    }
-
-    .hero p {
-        font-size: 16px;
-        max-width: 580px;
-        margin: 0 auto 40px;
-    }
-
-    /* Nav / Header for desktop */
-
-    .header-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 24px 40px;
+    .menu-icon {
+        display: none;
     }
 
     .desktop-nav {
         display: flex;
-        gap: 36px;
-        align-items: center;
+        gap: 40px;
+        transform: translateY(6px);
     }
 
     .desktop-nav a {
         font-family: 'inter', sans-serif;
-        font-size: 12px;
+        font-size: 19px;
+        font-weight: 300;
         letter-spacing: 0.2em;
-        color: rgba(255, 253, 251, 0.8);
+        color: #FFFDFB;
         text-decoration: none;
-        text-transform: uppercase;
-        transition: color 0.3s ease;
+        transition: opacity 0.3s ease;
     }
 
     .desktop-nav a:hover {
+        opacity: 0.7;
+    }
+
+    .hero {
+        padding: 10px;
+    }
+
+    .hero-header {
+        padding-top: 15px;
+        padding-bottom: 20px;
+        align-items: flex-end;
+    }
+
+    .logo {
+        font-size: 55px;
+        line-height: 1;
+        padding: 5px 15px;
+    }
+
+    .hero-image-container {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        clip-path: none;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+
+    .hero-text-box {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        width: 90%;
+    }
+
+    .hero-title {
+        font-family: 'bodoni moda', sans-serif;
+        font-weight: 400;
+        font-size: 62px;
+        line-height: 2;
+        letter-spacing: 0.45em;
+        text-transform: uppercase;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
         color: #fffdfb;
     }
 
-    .treatments-grid, .therapist-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
-        max-width: 1100px;
-        margin: 0 auto;
+    .hero-bottom {
+        padding: 1px 20px 90px;
+        gap: 45px;
     }
 
-    .therapist-card {
-        margin-bottom: 0;
+    .btn-break {
+        display: none;
+    }
+
+    .cta-button {
+        border: 1px solid #FFFDFB;
+        padding: 40px 50px;
+        font-size: 25px;
+        letter-spacing: 0.25em;
+        white-space: nowrap;
+        font-weight: 250;
+    }
+
+    .hero-keywords {
+        font-size: 25px;
+        font-weight: 200;
+    }
+
+    .treatments-section {
+        background-color: #EAE4DC;
+        padding: 80px 20px 100px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .treatments-section .section-title {
+        font-weight: 400;
+        font-size: 32px;
+        letter-spacing: 0.15em;
+        margin: 0 0 9px 0;
+    }
+
+    .treatments-section .section-subtitle {
+        font-weight: 300;
+        font-size: 14px;
+        letter-spacing: 0.25em;
+        margin: 0 0 60px 0;
+    }
+
+    .carousel-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow: visible;
+    }
+
+    .carousel-container:hover .card {
+        opacity: 0.6;
+        filter: brightness(0.85);
+    }
+
+    .carousel-container .card-link:hover .card {
+        opacity: 1;
+        filter: brightness(1.0);
+        transform: translateY(-8px);
+    }
+
+    .card-link {
+        text-decoration: none;
+        display: block;
+        flex: 0 1 375px;
+    }
+
+    .card-link:focus-visible .card {
+        outline: 2px solid #2F3538;
+        outline-offset: 4px;
+    }
+
+    .card {
+        position: relative;
+        width: 100%;
+        height: 540px;
+        overflow: hidden;
+
+        border-radius: 185px 185px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        transition: transform 0.4s ease, filter 0.4s ease, opacity 0.4s ease;
+    }
+
+    .card-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1; /* Bilden ligger i botten */
+    }
+
+    .card-overlay {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        /* Padding: uppe, höger, nere, vänster */
+        padding: 40px 30px 25px 20px; 
+        background: linear-gradient(
+            to bottom, 
+            rgba(0, 0, 0, 0) 0%, 
+            rgba(0, 0, 0, 0.55) 100%
+        );
+        box-sizing: border-box;
+        
+        /* Flyttar innehållet längst ned till höger */
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .card-title {
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-size: 22px;
+        letter-spacing: 0.25em;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+    }
+
+    .card-link:hover .card-title {
+        letter-spacing: 0.3em;
+        transition: letter-spacing 0.3s ease;
+    }
+
+     /* Recensioner – desktop */
+     .reviews-section {
+        padding: 120px 0;
+    }
+
+    .reviews-title {
+        font-size: 36px;
+    }
+
+    .reviews-subtitle {
+        font-size: 14px;
+        margin-bottom: 60px;
     }
 
     .carousel-wrapper {
-        max-width: 700px;
-        height: 460px;
+        max-width: 900px;
+        height: 620px;
     }
 
     .carousel-3d {
-        width: 320px;
-        height: 420px;
+        width: 420px;
+        height: 520px;
     }
 
+    .carousel-3d .glass-card {
+        padding: 50px 40px;
+    }
 
+    .glass-stars {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .glass-author {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .glass-text {
+        font-size: 22px;
+        line-height: 1.4;
+    }
 }
